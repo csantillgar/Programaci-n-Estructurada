@@ -9,7 +9,6 @@ void mostrarEstudiante(struct Estudiante *estudiante) {
     printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", estudiante->nombre, estudiante->edad, estudiante->promedio);
 }
 void agregarEstudiante(struct Estudiante *lista, int *numEstudiantes) {
-    // Verifica si hay espacio en la lista (por ejemplo, un límite de 10 estudiantes)
     if (*numEstudiantes < 10) {
         printf("Ingrese el nombre del estudiante: ");
         scanf("%s", lista[*numEstudiantes].nombre);
@@ -18,7 +17,6 @@ void agregarEstudiante(struct Estudiante *lista, int *numEstudiantes) {
         printf("Ingrese el promedio del estudiante: ");
         scanf("%f", &lista[*numEstudiantes].promedio);
 
-        // Incrementa el contador de estudiantes en la lista
         (*numEstudiantes)++;
         printf("Estudiante agregado correctamente.\n");
     } else {
