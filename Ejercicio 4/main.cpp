@@ -6,6 +6,7 @@ struct Estudiante {
     int edad;
     float promedio;
 };
+typedef struct Estudiante Estudiante;
 
 
 
@@ -15,9 +16,9 @@ struct Estudiante {
 
 int main()
 {
-    std::string name;
-    std::cout << "What is your name? ";
-    std::cin >> name;
-    std::cout << "Hello, " << name << "!\n";
+    Estudiante estudiante3;
+
+
+
     return 0;
 }
