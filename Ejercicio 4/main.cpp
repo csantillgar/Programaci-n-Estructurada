@@ -9,6 +9,7 @@ struct Estudiante {
 typedef struct Estudiante Estudiante;
 
 
+
 int main()
 {
     Estudiante estudiante3;
