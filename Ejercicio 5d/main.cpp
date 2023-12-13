@@ -23,7 +23,20 @@ void agregarEstudiante(struct ListaEstudiantes *lista, struct Estudiante est){
         printf("No se puede agregar, lista llena\n");
     }
 }
-
+void verListaEstudiantes(struct ListaEstudiantes *lista) {
+    if (lista->numEstudiantes > 0) {
+        printf("\nLista de Estudiantes:\n");
+        for (int i = 0; i < lista->numEstudiantes; i++) {
+            printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", lista->estudiantes[i].nombre, lista->estudiantes[i].edad, lista->estudiantes[i].promedio);
+        }
+    } else {
+        printf("La lista de estudiantes está vacía.\n");
+    }
+}
+void liberarLista(struct ListaEstudiantes *lista) {
+    free(lista->estudiantes);
+    lista->numEstudiantes = 0;
+}
 
 
 
