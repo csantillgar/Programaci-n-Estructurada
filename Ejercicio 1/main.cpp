@@ -1,5 +1,4 @@
 #include <iostream>
-#include <cstdio>
 
 struct Estudiante {
     char nombre[30];
@@ -72,7 +71,25 @@ int main() {
         printf("Seleccione una opción (1-4): ");
         scanf("%d", &opcion);
 
-    }
+
+        switch (opcion) {
+            case 1:
+                agregarEstudiante(listaEstudiantes, &numEstudiantes);
+                break;
+            case 2:
+                verListaEstudiantes(listaEstudiantes, numEstudiantes);
+                break;
+            case 3:
+                eliminarEstudiante(listaEstudiantes, &numEstudiantes);
+                break;
+            case 4:
+                printf("Saliendo de la aplicación.\n");
+                break;
+            default:
+                printf("Opción inválida. Intente de nuevo.\n");
+
+        }
+    } while (opcion != 4);
         return 0;
 
 
