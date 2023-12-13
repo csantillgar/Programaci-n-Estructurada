@@ -1,5 +1,6 @@
 #include <iostream>
-using namespace std;
+#include <cstdio>
+
 struct Estudiante {
     char nombre[30];
     int edad;
@@ -25,12 +26,14 @@ void agregarEstudiante(struct Estudiante *lista, int *numEstudiantes) {
 }
 void verListaEstudiantes(struct Estudiante *lista, int numEstudiantes) {
     if (numEstudiantes > 0) {
+        printf("\nLista de Estudiantes:\n");
         for (int i = 0; i < numEstudiantes; i++) {
             mostrarEstudiante(&lista[i]);
         }
     }
 }
-
+void eliminarEstudiante(struct Estudiante *lista, int *numEstudiantes) {
+    if (*numEstudiantes > 0) {
 
 int main() {
 
