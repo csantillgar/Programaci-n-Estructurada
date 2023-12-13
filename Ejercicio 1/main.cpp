@@ -23,7 +23,13 @@ void agregarEstudiante(struct Estudiante *lista, int *numEstudiantes) {
         printf("La lista de estudiantes está llena. No se pueden agregar más estudiantes.\n");
     }
 }
-
+void verListaEstudiantes(struct Estudiante *lista, int numEstudiantes) {
+    if (numEstudiantes > 0) {
+        for (int i = 0; i < numEstudiantes; i++) {
+            mostrarEstudiante(&lista[i]);
+        }
+    }
+}
 
 
 int main() {
