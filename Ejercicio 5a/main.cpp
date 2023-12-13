@@ -5,10 +5,11 @@ struct Estudiante {
     float nota;
 };
 void imprimirEstudiantePorValor(struct Estudiante est) {
-    printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", est.nombre, est.edad, est.promedio);
+    printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", est.nombre, est.edad, est.nota);
 }
 int main()
 {
-    std::cout << "Hello World!" << std::endl;
+    struct Estudiante estudiante1 = {"Ruben", 20, 9.5};
+    imprimirEstudiantePorValor(estudiante1);
     return 0;
 }
