@@ -1,7 +1,13 @@
 #include<iostream>
 
+
+union Dato {
+    int i;
+    float f;
+    char str[20];
+};
 int main()
 {
-    std::cout << "Hello World!" << std::endl;
+
     return 0;
 }
