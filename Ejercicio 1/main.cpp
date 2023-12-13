@@ -59,6 +59,8 @@ void eliminarEstudiante(struct Estudiante *lista, int *numEstudiantes) {
 }
 
 int main() {
+    struct Estudiante listaEstudiantes[10];
+    int numEstudiantes = 0;
 
 return 0;
 }
