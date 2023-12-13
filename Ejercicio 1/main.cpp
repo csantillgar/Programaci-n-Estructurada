@@ -30,10 +30,17 @@ void verListaEstudiantes(struct Estudiante *lista, int numEstudiantes) {
         for (int i = 0; i < numEstudiantes; i++) {
             mostrarEstudiante(&lista[i]);
         }
+    } else {
+        printf("La lista de estudiantes está vacía.\n");
     }
 }
+
 void eliminarEstudiante(struct Estudiante *lista, int *numEstudiantes) {
     if (*numEstudiantes > 0) {
+        verListaEstudiantes(lista, *numEstudiantes);
+    int indiceEliminar;
+    printf("Ingrese el número de estudiante a eliminar (1-%d): ", *numEstudiantes);
+    scanf("%d", &indiceEliminar);
 
 int main() {
 
