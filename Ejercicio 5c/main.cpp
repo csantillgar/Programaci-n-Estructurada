@@ -4,12 +4,12 @@ struct Estudiante {
     int edad;
     float nota;
 };
-void imprimirEstudiantePorValor(struct Estudiante est) {
-    printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", est.nombre, est.edad, est.nota);
+void imprimirEstudiantePorDireccion(struct Estudiante *est) {
+    printf("Nombre: %s, Edad: %d, Promedio: %.2f\n", est->nombre, est->edad, est->nota);
 }
 int main()
 {
     struct Estudiante estudiante1 = {"Ruben", 20, 9.5};
-    imprimirEstudiantePorValor(estudiante1);
+    imprimirEstudiantePorDireccion(&estudiante1);
     return 0;
 }
