@@ -61,6 +61,19 @@ void eliminarEstudiante(struct Estudiante *lista, int *numEstudiantes) {
 int main() {
     struct Estudiante listaEstudiantes[10];
     int numEstudiantes = 0;
+// MENU
+    int opcion;
+    do {
+        printf("\nMenú:\n");
+        printf("1. Agregar estudiante\n");
+        printf("2. Ver lista de estudiantes\n");
+        printf("3. Eliminar estudiante\n");
+        printf("4. Salir\n");
+        printf("Seleccione una opción (1-4): ");
+        scanf("%d", &opcion);
 
-return 0;
+    }
+        return 0;
+
+
 }
