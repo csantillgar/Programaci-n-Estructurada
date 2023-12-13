@@ -5,7 +5,10 @@ struct Estudiante {
     int edad;
     float promedio;
 };
-
+struct ListaEstudiantes {
+    struct Estudiante *estudiantes;
+    int numEstudiantes;
+};
 
 
 
