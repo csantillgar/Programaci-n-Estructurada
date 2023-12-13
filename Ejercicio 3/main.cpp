@@ -14,24 +14,15 @@ struct Estudiante copiarEstudiante(struct Estudiante estudiante) {
     return nuevoEstudiante;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 int main()
 {
-    std::string name;
-    std::cout << "What is your name? ";
-    std::cin >> name;
-    std::cout << "Hello, " << name << "!\n";
-    return 0;
+ struct Estudiante estudianteOriginal={"Rubén", 20, 9.5};
+ struct Estudiante estudianteCopia = copiarEstudiante(estudianteOriginal);
+
+ printf("Estudiante original:\n");
+ printf("Nombre: %s, Edad: %d, Nota: %.2f\n", estudianteOriginal.nombre, estudianteOriginal.edad, estudianteOriginal.nota);
+    printf("Estudiante copia:\n");
+    printf("Nombre: %s, Edad: %d, Nota: %.2f\n", estudianteCopia.nombre, estudianteCopia.edad, estudianteCopia.nota);
+
+ return 0;
 }
