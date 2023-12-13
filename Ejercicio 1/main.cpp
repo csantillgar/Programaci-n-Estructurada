@@ -42,6 +42,22 @@ void eliminarEstudiante(struct Estudiante *lista, int *numEstudiantes) {
     printf("Ingrese el número de estudiante a eliminar (1-%d): ", *numEstudiantes);
     scanf("%d", &indiceEliminar);
 
+        if (indiceEliminar >= 1 && indiceEliminar <= *numEstudiantes) {
+            // Elimina al estudiante desplazando los elementos restantes en la lista
+            for (int i = indiceEliminar - 1; i < *numEstudiantes - 1; i++) {
+                lista[i] = lista[i + 1];
+            }
+            // Decrementa el contador de estudiantes en la lista
+            (*numEstudiantes)--;
+            printf("Estudiante eliminado correctamente.\n");
+        } else {
+            printf("Índice inválido. No se eliminó ningún estudiante.\n");
+        }
+    } else {
+        printf("La lista de estudiantes está vacía. No se puede eliminar ningún estudiante.\n");
+    }
+}
+
 int main() {
 
 return 0;
