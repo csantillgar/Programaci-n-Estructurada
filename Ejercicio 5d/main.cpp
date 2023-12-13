@@ -14,7 +14,15 @@ void inicializarlista(struct ListaEstudiantes *lista, int capacidad) {
     struct Estudiante));
     lista->numEstudiantes = 0;
 }
-
+void agregarEstudiante(struct ListaEstudiantes *lista, struct Estudiante est){
+    if (lista->munEstudiantes <10) {
+        lista->estudiantes[lista->numEstudiantes] = est;
+        (lista->numEstudiantes)++;
+        printf("Estudiante agregado con exito\n");
+    } else {
+        printf("No se puede agregar, lista llena\n");
+    }
+}
 
 
 
