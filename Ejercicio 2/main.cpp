@@ -1,4 +1,5 @@
 #include<iostream>
+#include<cstring>
 
 
 union Dato {
@@ -15,10 +16,6 @@ int main()
     printf("dato.f = %f\n", dato.f);
     strcpy(dato.str, "C++ Programming");
     printf("dato.str = %s\n", dato.str);
-
-
-
-
 
 
     return 0;
