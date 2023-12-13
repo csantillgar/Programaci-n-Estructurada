@@ -42,6 +42,20 @@ void liberarLista(struct ListaEstudiantes *lista) {
 
 int main()
 {
-    std::cout << "Hello, world!" << std::endl;
+    struct ListaEstudiantes lista;
+    inicializarLista(&lista, 10);
+
+    // Crear instancias de la estructura Estudiante y agregar a la lista
+    struct Estudiante estudiante1 = {"Juan", 20, 9.5};
+    agregarEstudiante(&lista, estudiante1);
+
+    struct Estudiante estudiante2 = {"Ana", 22, 9.8};
+    agregarEstudiante(&lista, estudiante2);
+
+    // Mostrar la lista de estudiantes
+    verListaEstudiantes(&lista);
+
+    // Liberar la memoria de la lista
+    liberarLista(&lista);
     return 0;
 }
