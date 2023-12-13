@@ -1,4 +1,4 @@
-#include <iostream>
+#include <string>
 
 struct Estudiante {
     char nombre[50];
@@ -9,13 +9,13 @@ struct ListaEstudiantes {
     struct Estudiante *estudiantes;
     int numEstudiantes;
 };
-void inicializarlista(struct ListaEstudiantes *lista, int capacidad) {
-    lista->estudiantes = (struct Estudiante *) malloc(capacidad * siceof(
+void inicializarLista(struct ListaEstudiantes *lista, int capacidad) {
+    lista->estudiantes = (struct Estudiante *) malloc(capacidad * sizeof(
     struct Estudiante));
     lista->numEstudiantes = 0;
 }
 void agregarEstudiante(struct ListaEstudiantes *lista, struct Estudiante est){
-    if (lista->munEstudiantes <10) {
+    if (lista->numEstudiantes < 10) {
         lista->estudiantes[lista->numEstudiantes] = est;
         (lista->numEstudiantes)++;
         printf("Estudiante agregado con exito\n");
@@ -42,7 +42,7 @@ void liberarLista(struct ListaEstudiantes *lista) {
 
 int main()
 {
-    struct ListaEstudiantes lista;
+    struct ListaEstudiantes lista{};
     inicializarLista(&lista, 10);
 
     // Crear instancias de la estructura Estudiante y agregar a la lista
